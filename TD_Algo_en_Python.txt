@@ -8,3 +8,17 @@ ratio = a/b
 print ("le quotient_entier de ",a," divisé par ",b," est : ", quotient_entier)
 print ("le reste_division de ",a," divisé par ",b," est : ", reste_division)
 print ("le ratio de ",a," divisé par ",b," est : ", ratio)
+
+
+EXO 2:
+
+import math
+
+rayon = int(input("Donner le rayon du cercle \n"))
+PI = 4*math.atan(1)
+surface = rayon*rayon*PI
+perimetre = 2*rayon*PI
+
+#On convertit surface et périmètre avec 2 chiffres aprèes la virgule avec la fonction round(x,2)
+print("La surface du cerlce est : ",round(surface,2))
+print("Le périmètre est : ",round(perimetre,2))
