@@ -1,0 +1,10 @@
+EXO 1:
+
+a = int(input("Donner l'entier a \n"))
+b = int(input("Donner l'entier b \n"))
+quotient_entier = a//b
+reste_division = a%b
+ratio = a/b
+print ("le quotient_entier de ",a," divisé par ",b," est : ", quotient_entier)
+print ("le reste_division de ",a," divisé par ",b," est : ", reste_division)
+print ("le ratio de ",a," divisé par ",b," est : ", ratio)
