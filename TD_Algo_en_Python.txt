@@ -127,3 +127,143 @@ distance = math.sqrt((x2-x1)**2 + (y2-y1)**2)
 
 print("La distance entre A et B = ",distance )
 
+
+
+
+
+EXO 7:
+
+montant = int(input("Donner le montant à décomposer \n"))
+nombre_billet20 = montant//20
+reste = montant % 20
+nombre_billet10 = reste//10
+reste = reste % 10
+nombre_billet5 =reste//5
+reste = reste % 5
+nombre_piece2 =reste//2
+reste = reste % 2
+nombre_piece1 = reste
+
+print("Le nombre de billet de 20 = ",nombre_billet20)
+print("Le nombre de billet de 10 = ",nombre_billet10)
+print("Le nombre de billet de 5 = ",nombre_billet5)
+print("Le nombre de pièce de 2 = ",nombre_piece2)
+print("Le nombre de pièce de 1 = ",nombre_piece1)
+
+
+
+
+
+EXO 8:
+
+import math
+
+print("Résolution d'équation de type ax^2+bx+c = 0 ")
+
+a = int(input("Donner le coéfficient de a \n"))
+b = int(input("Donner le coéfficient de b \n"))
+c = int(input("Donner le coéfficient de c \n"))
+
+delta = (b*b)-(4*a*c)
+
+if (a == 0):
+    if (b == 0):
+        print("L'équation n'admet pas de solution ")
+    else:
+        print("La solution de l'équation est: ",(-c/b) )
+elif (delta > 0):
+    print("L'équation admet 2 solutions ")
+    print("S1 = ",(-b-math.sqrt(delta))/(2*a) )
+    print("S2 = ",(-b+math.sqrt(delta))/(2*a) )
+elif (delta ==0):
+    print("L'équation admet une unique solution ",-b/(2*a) )
+else:
+    print("L'équation n'admet pas de solution réel ")
+
+
+
+
+
+EXO 9: Version 1
+
+print("Calcul durée de vol dans le même jour \n\n")
+heureDepart = int(input("Donner heure départ \n"))
+minuteDepart = int(input("Donner minute départ \n"))
+heureArrivee = int(input("Donner l'heure d'arrivée \n"))
+minuteArrivee = int(input("Donner minute d'arrivée \n"))
+		
+
+if (minuteArrivee > minuteDepart):
+    nombreHeure = heureArrivee - heureDepart
+    nombreMinute = minuteArrivee - minuteDepart
+else:
+    nombreHeure = heureArrivee - 1 - heureDepart
+    nombreMinute = minuteArrivee + 60 - minuteDepart
+
+print("La durée du vol est de ",nombreHeure,"h:",nombreMinute,"mm")
+		
+
+
+
+
+
+
+EXO 9: Version 2
+
+print("Calcul durée de vol \n\n")
+heureDepart = int(input("Donner heure départ \n"))
+minuteDepart = int(input("Donner minute départ \n"))
+heureArrivee = int(input("Donner l'heure d'arrivée \n"))
+minuteArrivee = int(input("Donner minute d'arrivée \n"))
+		
+if (heureArrivee > heureDepart):
+    if (minuteArrivee > minuteDepart):
+        nombreHeure = heureArrivee - heureDepart
+        nombreMinute = minuteArrivee - minuteDepart
+    else:
+        nombreHeure = heureArrivee - 1 - heureDepart
+        nombreMinute = minuteArrivee + 60 - minuteDepart
+else:
+    if (minuteArrivee > minuteDepart):
+        nombreHeure = heureArrivee + 24 - heureDepart
+        nombreMinute = minuteArrivee - minuteDepart
+    else:
+        nombreHeure = heureArrivee +24 -1 - heureDepart
+        nombreMinute = minuteArrivee + 60 - minuteDepart
+        
+print("La durée du vol est de ",nombreHeure,"h:",nombreMinute,"mm")
+		
+
+
+
+
+
+EXO 10:
+
+print("Trie de 3 valeurs pas échance sucessif en les affichant par ordre croissant ")
+a = int(input("Donner l'entier a \n"))
+b = int(input("Donner l'entier b \n"))
+c = int(input("Donner l'entier c \n"))
+if (a > b):
+    svg = a
+    a = b
+    b = svg
+    if (b > c):
+        svg = b
+        b = c
+        c = svg
+        if (a > b):
+            svg = a
+            a = b
+            b = svg
+else:
+    if (b > c):
+        svg = b
+        b = c
+        c = svg
+        if (a > b):
+            svg = a
+            a = b
+            b = svg
+        
+print("Les valeurs dans l'ordre croissant sont : ",a," ",b," ",c)
