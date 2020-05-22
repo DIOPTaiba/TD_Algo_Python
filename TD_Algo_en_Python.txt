@@ -267,3 +267,51 @@ else:
             b = svg
         
 print("Les valeurs dans l'ordre croissant sont : ",a," ",b," ",c)
+
+
+
+
+
+EXO 11:
+
+a = int(input("Donner le premier entier \n"))
+operation = (input("Taper +, -, * ou / pour choisir le calcul à effectuer \n"))
+b = int(input("Donner le duexième entier \n"))
+
+if (operation == "+" ):
+    resultat = a+b
+    print("La somme de ",a,"+",b," = ",resultat)
+if (operation == "-" ):
+    resultat = a-b
+    print("La soustraction de ",a,"-",b," = ",resultat)
+if (operation == "*" ):
+    resultat = a*b
+    print("La multiplication de ",a,"*",b," = ",resultat)
+if (operation == "/" ):
+    resultat = a/b
+    print("La division de ",a,"/",b," = ",resultat)
+if (operation != "+" and operation != "-" and operation != "*" and operation != "/" ):
+    print("Veillez revoir votre opérateur")
+    
+
+
+
+
+
+EXO 12:
+
+print("Ce Programme permet de tester si un nombre est premier ou pas \n")
+nombre = int(input("Donner le nombre à tester \n"))
+
+somme = 0
+if (nombre == 0):
+        print("Le nombre ",nombre," n'est pas parfait")
+else:
+    for i in range (1, (nombre//2)+1):
+        if (nombre % i == 0):
+            somme = somme + i
+
+    if (nombre == somme):
+        print("Le nombre ",nombre," est parfait")
+    else:
+        print("Le nombre ",nombre," n'est pas parfait")
