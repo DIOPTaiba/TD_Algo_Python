@@ -315,3 +315,161 @@ else:
         print("Le nombre ",nombre," est parfait")
     else:
         print("Le nombre ",nombre," n'est pas parfait")
+
+
+
+
+
+EXO 13:
+
+print(" Ce Programme test si une date est valide ou non")
+jour = int(input("Entrer le jour du mois \n"))
+mois = int(input("Entrer le mois \n"))
+annee = int(input("Entrer l'année \n"))
+
+if (jour<=0 or jour>31 or mois<=0 or mois>12 or annee<=0):
+    print("La date ",jour,"/",mois,"/",annee," est invalide")
+elif (jour<=31 and (mois==1 or mois==3 or mois==5 or mois==7 or mois==8 or mois==10 or mois==12)):
+    print("La date ",jour,"/",mois,"/",annee," est valide")
+elif (jour<=30 and (mois==4 or mois==6 or mois==9 or mois==11)):
+    print("Date valide")
+elif (jour==31 and (mois==4 or mois==6 or mois==9 or mois==11)):
+    print("La date ",jour,"/",mois,"/",annee," est invalide")
+elif (mois == 2):
+    if (annee%4 == 0 and  (annee%100 != 0 or annee%400 == 0)):
+        if (jour <= 29):
+            print("La date ",jour,"/",mois,"/",annee," est valide")
+        else:
+            print("La date ",jour,"/",mois,"/",annee," est invalide")
+    elif (jour <= 28):
+        print("La date ",jour,"/",mois,"/",annee," est valide")
+    else:
+        print("La date ",jour,"/",mois,"/",annee," est invalide")
+        
+        
+
+
+
+
+
+EXO 14:
+
+print(" Ce Programme test si une année est bissextile ou non")
+jour = int(input("Entrer le jour du mois \n"))
+mois = int(input("Entrer le mois \n"))
+annee = int(input("Entrer l'année \n"))
+
+if (annee%4 == 0 and  (annee%100 != 0 or annee%400 == 0)):
+    print("L'année",annee,"est bissextile")
+else :
+    print("L'année",annee,"n'est pas bissextile")
+
+
+
+
+
+EXO 15:
+
+print(" Ce Programme prend en entrée un nombre et calcul la somme \
+et la moyenne des entiers jusqu'à ce nombre \n");
+
+nombre = int(input("Entrer le nombre \n"))
+somme = 0
+for i in range (1,nombre+1):
+    somme = somme+i
+
+moyenne = somme/nombre
+print("la somme des entiers = ",somme)
+print("La moyenne des entiers = ",moyenne)
+
+
+
+
+
+EXO 16:
+
+print("Ce programme calcule et affiche la division de a par b \
+par soustractions successives")
+a = int(input("Entrer l'entier a \n"))
+dividende = a
+b = int(input("Entrer l'entier b \n"))
+quotient = 0
+
+while (a >= b):
+    quotient = quotient + 1
+    a = a-b
+
+print("Le résultat de la division de ",dividende,"/",b," =",quotient)
+
+
+
+
+
+EXO 17:
+
+print("Ce programme calcule le PGCD de deux nombres saisis au clavier \n")
+a = int(input("Donner le nombre a \n"))
+b = int(input("Donner le nombre b \n"))
+
+while (a != b):
+    if (a > b):
+        a = a-b
+    else:
+        b = b-a
+
+print("Le PGCD est ",a)
+
+
+
+
+
+EXO 18:
+
+print("Ce programme calcule le PPCM de deux nombres saisis au clavier \n")
+a = int(input("Donner le nombre a \n"))
+b = int(input("Donner le nombre b \n"))
+produit = a*b
+
+while (a != b):
+    if (a > b):
+        a = a-b
+    else:
+        b = b-a
+
+print("Le PPCM est ",produit//a)
+
+
+
+
+
+EXO 19:
+
+print("Ce programme affiche la somme des prix d'une suite d'articles en CFA\
+(entiers) saisies par l'utilisateur tant que l'utilisateur n'a pas tapé zéro. \n")
+
+prix = int(input("Donner le prix d'un article \n"))
+somme = prix
+while (prix != 0):
+    prix = int(input("Donner le prix d'un article \n"))
+    somme += prix 
+
+print("Le prix total des articles =",somme, "FCFA")
+
+
+
+
+
+EXO 20:
+
+print("Ce Programme demande successivement 10 nombres à l'utilisateur et qui affiche\
+à la fin le plus grand de ces 10 nombres Et affiche aussi son rang dans la liste saisie");
+
+nombrePlusGrand = 0
+for i in range (1, 11):
+    nombre = int(input("Donner un nombre \n"))
+    if (nombre > nombrePlusGrand):
+        nombrePlusGrand = nombre
+        rang = i
+
+print("Le nombre le plus grand est : ",nombrePlusGrand," et se trouve à la position ",rang)
+		
